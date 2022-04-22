@@ -1,0 +1,9 @@
+# ninja log v5
+1	428	6722398757524071	helloworld_autogen/timestamp	a0a61369b603a528
+1620	2060	6722398774768272	helloworld.exe	4b937394897b4184
+1	428	6722398757524071	helloworld_autogen/mocs_compilation.cpp	a0a61369b603a528
+1	428	6722398757524071	F:/source/2022.04.21/build-helloworld-Desktop_Qt_5_15_2_MSVC2019_32bit-Release/helloworld_autogen/timestamp	a0a61369b603a528
+1	428	6722398757524071	F:/source/2022.04.21/build-helloworld-Desktop_Qt_5_15_2_MSVC2019_32bit-Release/helloworld_autogen/mocs_compilation.cpp	a0a61369b603a528
+430	1609	6722398770190424	CMakeFiles/helloworld.dir/helloworld_autogen/mocs_compilation.cpp.obj	b35167508b90539e
+436	1619	6722398770210375	CMakeFiles/helloworld.dir/hellodialog.cpp.obj	dbdaae21fe57b305
+442	1601	6722398770130578	CMakeFiles/helloworld.dir/main.cpp.obj	abce2260a5ac1d90
