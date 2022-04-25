@@ -3,10 +3,10 @@
 int main(int argc,char *argv[])
 {
     QApplication a(argc,argv);
-    QWidget *widget = new QWidget();
+    QWidget *widget = new QWidget(0,Qt::Dialog | Qt::FramelessWindowHint);
     widget->setWindowTitle(QObject::tr("我是宋林"));
 
-    QLabel *label = new QLabel();
+    QLabel *label = new QLabel(0,Qt::SplashScreen | Qt::FramelessWindowHint);
     label->setWindowTitle(QObject::tr("我是label"));
     label->setText(QObject::tr("label:我是窗口"));
     label->resize(180,20);
