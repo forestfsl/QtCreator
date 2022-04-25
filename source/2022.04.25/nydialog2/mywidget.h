@@ -2,6 +2,7 @@
 #define MYWIDGET_H
 
 #include <QMainWindow>
+#include <QWizard>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MyWidget; }
@@ -34,5 +35,8 @@ private slots:
 
 private:
     Ui::MyWidget *ui;
+    QWizardPage *createPage1();
+    QWizardPage *createPage2();
+    QWizardPage *createPage3();
 };
 #endif // MYWIDGET_H

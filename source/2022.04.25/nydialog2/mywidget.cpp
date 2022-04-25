@@ -7,6 +7,9 @@
 #include <QFontDialog>
 #include <QInputDialog>
 #include <QMessageBox>
+#include <QProgressDialog>
+#include <QErrorMessage>
+#include <QWizard>
 
 MyWidget::MyWidget(QWidget *parent)
     : QMainWindow(parent)
@@ -80,23 +83,66 @@ void MyWidget::on_pushButton_5_clicked()
     int ret1 = QMessageBox::question(this,tr("question dialog"),tr("qt"),QMessageBox::Yes,QMessageBox::No);
     if(ret1 == QMessageBox::Yes) qDebug() << tr("question!");
 
+    int ret2 = QMessageBox::information(this,tr("alert"),tr("book"),QMessageBox::Ok);
+    if(ret2 == QMessageBox::Ok) qDebug() << tr("alert");
+
 }
 
 
 void MyWidget::on_pushButton_6_clicked()
 {
+    QProgressDialog dialog(tr("文件复制进度"),tr("取消"),0,5000,this);
+    dialog.setWindowTitle(tr("progress alert"));
+    dialog.setWindowModality(Qt::WindowModal);
+    dialog.show();
 
+    for(int i = 0;i < 50000;i++){
+        dialog.setValue(i);
+        QCoreApplication::processEvents();
+        if(dialog.wasCanceled()) break;
+    }
+    dialog.setValue(5000);
+    qDebug() << tr("复制结束");
 }
 
 
 void MyWidget::on_pushButton_7_clicked()
 {
+    QErrorMessage *errordlg = new QErrorMessage();
+    errordlg->setWindowTitle(tr("alert"));
+    errordlg->showMessage(tr("error messaage"));
+}
 
+
+QWizardPage * MyWidget::createPage1()
+{
+    QWizardPage *page = new QWizardPage;
+    page->setTitle(tr("介绍"));
+    return page;
+}
+
+QWizardPage * MyWidget::createPage2()
+{
+    QWizardPage *page = new QWizardPage;
+    page->setTitle(tr("用户选择信息"));
+    return page;
+}
+
+QWizardPage * MyWidget::createPage3()
+{
+    QWizardPage *page = new QWizardPage;
+    page->setTitle(tr("结束"));
+    return page;
 }
 
 
 void MyWidget::on_pushButton_8_clicked()
 {
-
+    QWizard wizard(this);
+    wizard.setWindowTitle(tr("alert"));
+    wizard.addPage(createPage1());
+    wizard.addPage(createPage2());
+    wizard.addPage(createPage3());
+    wizard.exec();
 }
 
