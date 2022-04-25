@@ -10,12 +10,15 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
+    mydialog.cpp \
     mywidget.cpp
 
 HEADERS += \
+    mydialog.h \
     mywidget.h
 
 FORMS += \
+    mydialog.ui \
     mywidget.ui
 
 # Default rules for deployment.

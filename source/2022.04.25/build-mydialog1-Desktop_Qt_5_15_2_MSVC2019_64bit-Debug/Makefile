@@ -241,6 +241,7 @@ Makefile: ..\mydialog1\mydialog1.pro D:\qt\5.15.2\msvc2019_64\mkspecs\win32-msvc
 		D:\qt\5.15.2\msvc2019_64\mkspecs\features\qt_config.prf \
 		D:\qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.conf \
 		D:\qt\5.15.2\msvc2019_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		D:\qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds.prf \
 		D:\qt\5.15.2\msvc2019_64\mkspecs\common\msvc-version.conf \
 		D:\qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf \
@@ -270,7 +271,6 @@ Makefile: ..\mydialog1\mydialog1.pro D:\qt\5.15.2\msvc2019_64\mkspecs\win32-msvc
 		D:\qt\5.15.2\msvc2019_64\lib\Qt5Gui.prl \
 		D:\qt\5.15.2\msvc2019_64\lib\Qt5Core.prl \
 		D:\qt\5.15.2\msvc2019_64\lib\qtmain.prl \
-		.qmake.stash \
 		D:\qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf \
 		D:\qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl \
 		D:\qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl \
@@ -434,6 +434,7 @@ D:\qt\5.15.2\msvc2019_64\mkspecs\features\qt_functions.prf:
 D:\qt\5.15.2\msvc2019_64\mkspecs\features\qt_config.prf:
 D:\qt\5.15.2\msvc2019_64\mkspecs\win32-msvc\qmake.conf:
 D:\qt\5.15.2\msvc2019_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 D:\qt\5.15.2\msvc2019_64\mkspecs\features\exclusive_builds.prf:
 D:\qt\5.15.2\msvc2019_64\mkspecs\common\msvc-version.conf:
 D:\qt\5.15.2\msvc2019_64\mkspecs\features\toolchain.prf:
@@ -463,7 +464,6 @@ D:\qt\5.15.2\msvc2019_64\lib\Qt5Widgets.prl:
 D:\qt\5.15.2\msvc2019_64\lib\Qt5Gui.prl:
 D:\qt\5.15.2\msvc2019_64\lib\Qt5Core.prl:
 D:\qt\5.15.2\msvc2019_64\lib\qtmain.prl:
-.qmake.stash:
 D:\qt\5.15.2\msvc2019_64\mkspecs\features\build_pass.prf:
 D:\qt\5.15.2\msvc2019_64\lib\Qt5Widgetsd.prl:
 D:\qt\5.15.2\msvc2019_64\lib\Qt5Guid.prl:

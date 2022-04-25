@@ -21,5 +21,7 @@ private:
 
 public slots:
     void showChildDialog();
+private slots:
+    void on_pushButton_clicked();
 };
 #endif // MYWIDGET_H
