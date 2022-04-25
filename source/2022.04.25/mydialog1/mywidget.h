@@ -17,5 +17,9 @@ public:
 
 private:
     Ui::MyWidget *ui;
+
+
+public slots:
+    void showChildDialog();
 };
 #endif // MYWIDGET_H
