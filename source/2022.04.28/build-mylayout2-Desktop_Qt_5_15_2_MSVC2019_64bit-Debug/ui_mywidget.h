@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFontComboBox>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -22,6 +23,7 @@ class Ui_MyWidget
 public:
     QFontComboBox *fontComboBox;
     QTextEdit *textEdit;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *MyWidget)
     {
@@ -34,6 +36,9 @@ public:
         textEdit = new QTextEdit(MyWidget);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
         textEdit->setGeometry(QRect(130, 80, 104, 71));
+        pushButton = new QPushButton(MyWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(290, 310, 75, 24));
 
         retranslateUi(MyWidget);
 
@@ -43,6 +48,7 @@ public:
     void retranslateUi(QWidget *MyWidget)
     {
         MyWidget->setWindowTitle(QCoreApplication::translate("MyWidget", "MyWidget", nullptr));
+        pushButton->setText(QCoreApplication::translate("MyWidget", "PushButton", nullptr));
     } // retranslateUi
 
 };
