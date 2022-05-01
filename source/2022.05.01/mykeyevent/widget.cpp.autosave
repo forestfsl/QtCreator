@@ -1,0 +1,44 @@
+#include "widget.h"
+#include "ui_widget.h"
+#include <QKeyEvent>
+#include <QDebug>
+
+Widget::Widget(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::Widget)
+{
+    ui->setupUi(this);
+    setFocus();
+    keyLeft = false;
+    keyUp = false;
+    move = false;
+}
+
+void Widget::keyPressEvent(QKeyEvent *event)
+{
+//    if(event->modifiers() == Qt::ControlModifier){//是否按下Ctrl
+//        if(event->key() == Qt::Key_M) //是否按下M键
+//            setWindowState(Qt::WindowMaximized);//窗口最大化
+//    }else QWidget::keyPressEvent(event);
+    if(event->key() == Qt::Key_Up){
+        if(event->isAutoRepeat()) return;
+        keyUp = true;
+    }
+    else if(event->key() == Qt::Key_Left){
+        if (event->isAutoRepeat()) return;
+        keyLeft = true;
+    }
+}
+
+void Widget::keyReleaseEvent(QKeyEvent *event)
+{
+    if(event->key() == Qt::Key_Up){
+        
+    }
+}
+
+Widget::~Widget()
+{
+    delete ui;
+}
+
