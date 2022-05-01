@@ -14,16 +14,12 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-
+protected:
+    void timerEvent(QTimerEvent *event);
 private:
     Ui::Widget *ui;
-    bool keyUp;
-    bool keyLeft;
-    bool move;
-
-protected:
-    void keyPressEvent(QKeyEvent *event);
-    void keyReleaseEvent(QKeyEvent *event);
-
+    int id1,id2,id3;
+private slots:
+    void timerUpdate();
 };
 #endif // WIDGET_H
